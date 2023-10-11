@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    color: #0074d9;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.status-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ff5733;
+    margin-bottom: 10px;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+#status {
+    font-size: 24px;
+    color: #ff5733;
+    font-weight: bold;
+}
+
+body.offline {
+    background-color: #333; /* Dark background when offline */
+    transition: background-color 0.5s;
+}
+
+body.online {
+    background-color: #00ff00; /* Bright green background when online */
+    transition: background-color 0.5s;
+}
+
+#checkButton {
+    padding: 10px 20px;
+    background-color: #0074d9;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+#checkButton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+#checkButton:focus {
+    box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.5);
+}
+body.online {
+    background-color: #e9cfc1; /* Change to a shade of blue when online */
+    transition: background-color 0.5s;
+}
